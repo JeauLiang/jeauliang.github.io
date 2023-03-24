@@ -1,56 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Loading Animation</title>
-	<style>
-		.loader {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-			background-color: #f2f2f2;
-		}
-		.spinner {
-			width: 60px;
-			height: 60px;
-			animation: spin 4s linear infinite;
-		}
-		.spinner circle {
-			fill: none;
-			stroke: #3498db;
-			stroke-width: 5px;
-			stroke-linecap: round;
-			animation: dash 3s ease-in-out infinite;
-		}
-		@keyframes spin {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
-		}
-		@keyframes dash {
-			0% {
-				stroke-dasharray: 1, 200;
-				stroke-dashoffset: 0;
-			}
-			50% {
-				stroke-dasharray: 90, 200;
-				stroke-dashoffset: -35;
-			}
-			100% {
-				stroke-dasharray: 90, 200;
-				stroke-dashoffset: -124;
-			}
-		}
-	</style>
-</head>
-<body>
-	<div class="loader">
-		<svg class="spinner" viewBox="0 0 50 50">
-			<circle cx="25" cy="25" r="20"></circle>
-		</svg>
-	</div>
-	<script>
-		// 重定向到 https://bio.site/jeauliang
-		window.location.href = "https://bio.site/jeauliang";
-	</script>
-</body>
+  <head>
+    <title>Loading Animation</title>
+    <style>
+      /* 定义加载动画样式 */
+      .loader {
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 50px solid #3498db;
+        animation: spin 1s linear infinite;
+        margin: auto;
+        margin-top: 20%;
+      }
+      
+      /* 定义旋转动画 */
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <script>
+      // 3秒后重定向到 https://bio.site/jeauliang
+      setTimeout(function() {
+        window.location.href = "https://bio.site/jeauliang";
+      }, 3000);
+    </script>
+  </body>
 </html>
