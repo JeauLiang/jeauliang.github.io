@@ -1,10 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>重定向到 https://bio.site/jeauliang</title>
-    <meta http-equiv="refresh" content="0; URL=https://bio.site/jeauliang">
-  </head>
-  <body>
-    <p>如果您的浏览器没有自动重定向，请点击以下链接：<a href="https://bio.site/jeauliang">https://bio.site/jeauliang</a></p>
-  </body>
+<head>
+	<title>Loading Animation</title>
+	<style>
+		.loader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f2f2f2;
+		}
+		.spinner {
+			width: 60px;
+			height: 60px;
+			animation: spin 4s linear infinite;
+		}
+		.spinner circle {
+			fill: none;
+			stroke: #3498db;
+			stroke-width: 5px;
+			stroke-linecap: round;
+			animation: dash 3s ease-in-out infinite;
+		}
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		@keyframes dash {
+			0% {
+				stroke-dasharray: 1, 200;
+				stroke-dashoffset: 0;
+			}
+			50% {
+				stroke-dasharray: 90, 200;
+				stroke-dashoffset: -35;
+			}
+			100% {
+				stroke-dasharray: 90, 200;
+				stroke-dashoffset: -124;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="loader">
+		<svg class="spinner" viewBox="0 0 50 50">
+			<circle cx="25" cy="25" r="20"></circle>
+		</svg>
+	</div>
+	<script>
+		// 重定向到 https://bio.site/jeauliang
+		window.location.href = "https://bio.site/jeauliang";
+	</script>
+</body>
 </html>
