@@ -1,78 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>个人项目列表</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jasonlong/cayman.css/css/cayman.css">
-    <style>
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            margin-top: 50px;
-        }
-        .project {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease-in-out;
-        }
-        .project:hover {
-			transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-		.text-center {
-			text-align: center;
-			}
-        .project h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #333;
-        }
-        .project p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #666;
-            margin-bottom: 10px;
-        }
-        .project a {
-            display: inline-block;
-            font-size: 16px;
-            color: #fff;
-            background-color: #0366d6;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-align: center;
-            text-decoration: none;
-            transition: all 0.3s ease-in-out;
-            margin-top: 10px;
-        }
-        .project a:hover {
-            background-color: #1f6feb;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projects</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" href="./css/noscript.css">
+	<style>
+		.image-container {
+			display: flex;
+			justify-content: space-between;
+		}
+		.image-container img {
+			width: 30%;
+			height: auto;
+		}
+	</style>
 </head>
-<body>
-<header class="page-header text-center">
-	<h1 class="project-name">个人项目列表</h1>
-	</header>
-<div class="container">
-    <div class="project">
-        <h2>飞猪旅行怪</h2>
-        <p>2019淘宝造物节———飞猪创意艺术装置</p>
-        <a href="https://mp.weixin.qq.com/s/dPFY2nYUes9xdQREdHPPbg" target="_blank">查看详情</a>
-    </div>
-    <div class="project">
-        <h2>光爱计划</h2>
-        <p>2019中国美陈展———蜂窝灯光装置</p>
-        <a href="https://mp.weixin.qq.com/s/Fz1PQH0VaSfo97OWORIv2Q" target="_blank">查看详情</a>
-    </div>
-    <div class="project">
-        <h2>会飞的帽子</h2>
-        <p>一款会人脸识别自拍的圣诞飞帽</p>
-        <a href="https://mp.weixin.qq.com/s/qsStUfeIiuLMrBwESRKLkw" target="_blank">查看详情</a>
-    </div>
-</div>
+<body class="is-loading">
+
+	<!-- 背景滚动效果 -->
+	<div id="bg"></div>
+	<div id="overlay"></div>
+
+	<!-- 页面内容 -->
+	<div id="wrapper">
+
+		<!-- 页眉 -->
+		<header id="header">
+			<h1>Projects</h1>
+			<!-- <nav>
+				<ul>
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav> -->
+		</header>
+
+		<!-- 介绍 -->
+		<section id="intro" class="wrapper style1 fullscreen fade-up">
+			<div class="inner">
+				<p>Welcome to my projects showcase webpage! Here, I will showcase my projects and share my creativity and skills. I hope you enjoy my work, and if you have any questions or suggestions, please feel free to contact me. Thank you for visiting!</p>
+			</div>
+		</section>
+
+		<!-- 作品 -->
+		<section id="work" class="wrapper style2 spotlights">
+			<!-- 作品1 -->
+			<section>
+				<a href="#" class="image">
+				</a>
+				<div class="content" style="text-align:center;">
+					<div class="inner">
+						<h2>Automatic Book Flipper</h2>
+						<img src="./images/BookReader.gif" alt="" style="border-radius: 1%;"/>
+					</div>
+				</div>
+			</section>
+			<br>
+
+			<!-- 作品2 -->
+			<section>
+				<div class="content">
+					<div class="inner" style="text-align:center;">
+						<h2>Touch My Heart</h2>
+						<img src="./images/TouchMyHeart.gif" alt="" style="border-radius: 1%;"/>
+						<div style="display:flex; justify-content:center;">
+							<div class="inner">
+								<ul class="actions">
+									<li><a href="https://mp.weixin.qq.com/s/Xv1rozOzniVkx061cY3aBg" class="button" target="_blank">Learn more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+
+			<!-- 作品3 -->
+			<section>
+				<div class="content">
+					<div class="inner" style="text-align:center;">
+						<h2>Light of Love Plan</h2>
+						<img src="./images/InTheLight.gif" alt="" style="border-radius: 1%;"/>
+						<div style="display:flex; justify-content:center;">
+							<div class="inner">
+								<ul class="actions">
+									<li><a href="https://mp.weixin.qq.com/s/Fz1PQH0VaSfo97OWORIv2Q" class="button" target="_blank">Learn more</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<br>
+
+			<!-- 作品4 -->
+			<section>
+				<div class="content">
+					<div class="inner" style="text-align:center;">
+						<h2>Something Else</h2>
+						<div class="image-container">
+							<img src="./images/Bicycle.gif" alt="" style="border-radius: 1%;"/>
+							<img src="./images/Body.gif" alt="" style="border-radius: 1%;"/>
+							<img src="./images/Handshake.gif" alt="" style="border-radius: 1%;"/>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<!-- 页脚 -->
+		<footer id="footer" class="wrapper style5 fade-up">
+			<div class="inner">
+				<h2>Contact Me</h2>
+				<ul class="icons">
+					<li><a href="mailto:devs.liang@outlook.com"><span class="label">Mail</span></a></li>
+					<li><a href="https://github.com/JeauLiang" target="_blank"><span class="label">GitHub</span></a></li>
+					<li><a href="https://gitee.com/JeauLiang" target="_blank"><span class="label">Gitee</span></a></li>
+				</ul>
+				<p>&copy; Code:ChatGPT. | Design: <a href="https://html5up.net">HTML5 UP</a></p>
+			</div>
+		</footer>
+	</div>
+
+	<!-- JavaScript -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/jquery.scrollex.min.js"></script>
+	<script src="./js/jquery.scrolly.min.js"></script>
+	<script src="./js/browser.min.js"></script>
+	<script src="./js/breakpoints.min.js"></script>
+	<script src="./js/util.js"></script>
+	<script src="./js/main.js"></script>
+
 </body>
 </html>

@@ -1,34 +1,117 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Loading Animation</title>
-    <style>
-      /* 定义加载动画样式 */
-      .loader {
-        width: 0;
-        height: 0;
-        border-left: 30px solid transparent;
-        border-right: 30px solid transparent;
-        border-bottom: 50px solid #3498db;
-        animation: spin 1s linear infinite;
-        margin: auto;
-        margin-top: 20%;
-      }
-      
-      /* 定义旋转动画 */
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="loader"></div>
-    <script>
-      // 3秒后重定向到 https://bio.site/jeauliang
-      setTimeout(function() {
-        window.location.href = "https://bio.site/jeauliang";
-      }, 3000);
-    </script>
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>My Personal Page</title>
+	<style>
+		.background {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: linear-gradient(-45deg, #de6f4d, #be6286, #23a6d5, #4ac3a7);
+			background-size: 400% 400%;
+			animation: gradientBg 15s ease infinite;
+		}
+
+		@keyframes gradientBg {
+			0% {
+				background-position: 0% 50%;
+			}
+
+			50% {
+				background-position: 100% 50%;
+			}
+
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+
+		.container {
+			position: absolute;
+			top: 40%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+		}
+
+		.avatar {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			object-fit: cover;
+			box-shadow: 0 0 0 5px #fff;
+		}
+
+		.name {
+			margin-top: 20px;
+			font-size: 36px;
+		}
+
+		.description {
+			margin-top: 8px;
+			font-size: 16px;
+		}
+
+		.button {
+			display: inline-block;
+			margin-top: 20px;
+			padding: 10px 20px;
+			border-radius: 50px;
+			background-color: #fff;
+			color: #000;
+			font-size: 15px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+		}
+
+		.button:hover {
+			transform: scale(1.1);
+			background-color: #fff;
+		}
+
+		.name,
+		.description {
+			color: #fff;
+		}
+		@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+}
+	</style>
+</head>
+
+<body>
+	<div class="background"></div>
+
+	<div class="container">
+		<img class="avatar" src="https://avatars.githubusercontent.com/u/46748111?v=4" alt="JeauLiang">
+		<h1 class="name">JeauLiang</h1>
+		<p class="description">一个野生程序员，师从诸子百家</p>
+		<a class="button" href="./projects.html">我的项目列表</a>
+	</div>
+</body>
+
 </html>
