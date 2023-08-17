@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button and Link</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  .button-container {
+    text-align: center;
+  }
+  .custom-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .custom-button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <div class="button-container">
+    <button class="custom-button" onclick="redirectToLink()">点击跳转</button>
+  </div>
+  
+  <script>
+    function redirectToLink() {
+      // 修改超链接路径为"fzd://fenzhidao.com/app"
+      window.location.href = "fzd://fenzhidao.com/app";
+    }
+  </script>
+</body>
+</html>
